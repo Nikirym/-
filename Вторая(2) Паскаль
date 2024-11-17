@@ -19,7 +19,7 @@ begin
 end;
 
 begin
-  writeln('ПИб-242 Якушев С.А.');
+  writeln('ПИб-242 Карымов Н.С');
   writeln('Введите значение A (true или false): ');
   readln(A);
   writeln('Введите значение B (true или false): ');
