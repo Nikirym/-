@@ -1,0 +1,14 @@
+var
+  x, y: real;
+begin
+  writeln('Карымов Н.С. ПИб-242');
+  writeln('Введите значение x:');
+  readln(x);
+  if x < -11 then
+     y:=13*x**4-110
+  else if (-11<=x) and (x<=8) then 
+    y:=26*x**5+x**3-x**2
+  else
+    y:=(5/27)*x**2-51;
+  writeln('Значение y: ', y:0:8);
+end.
