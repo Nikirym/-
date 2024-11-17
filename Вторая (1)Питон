@@ -1,9 +1,9 @@
-def f(x: float) -> float:
-    if x < -11:
-        return 13 * x ** 4 - 110
-    elif -11 <= x <= 8:
-        return 26 * x ** 5  + x ** 3 - x ** 2
-    else:
-        return 5 / 27 - x ** 2 - 51
-
-print(f(float(input("x = "))))
+print('Карымов Н.С. ПИб-242')
+x = float(input("Введите значение x:"))
+if x < -11:
+    y=13*x**4-110
+elif    -11<=x<=8:
+    y=26*x**5+x**3-x**2
+else:
+    y=(5/27)*x**2-51  
+print ("Значение y:", y) 
