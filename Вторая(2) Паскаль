@@ -1,0 +1,39 @@
+var
+  A, B, C: boolean;
+  oper1, oper2: string;
+  res: boolean;
+
+function logical_operation(a, b: boolean; oper: string): boolean;
+begin
+  if oper = 'and' then
+    logical_operation := a and b
+  else if oper = 'or' then
+    logical_operation := a or b
+  else if oper = 'not' then
+    logical_operation := not a
+  else  
+  begin
+    writeln('Неверный оператор');
+    logical_operation := false;
+  end;
+end;
+
+begin
+  writeln('ПИб-242 Якушев С.А.');
+  writeln('Введите значение A (true или false): ');
+  readln(A);
+  writeln('Введите значение B (true или false): ');
+  readln(B);
+  writeln('Введите значение C (true или false): ');
+  readln(C);
+
+  writeln('Введите первый оператор (and, or, not): ');
+  readln(oper1);
+  writeln('Введите второй оператор (and, or, not): ');
+  readln(oper2);
+
+  res := logical_operation(A, B, oper1);
+  res := logical_operation(res, C, oper2);
+
+  writeln('Результат выражения: ', res);
+end.
