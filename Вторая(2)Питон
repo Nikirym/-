@@ -1,0 +1,26 @@
+print('ПИб-242 Карымов')
+def evaluate_expression(A, B, C, op1, op2):
+    if op1 == 'И':
+        first_part = A and B
+    elif op1 == 'ИЛИ':
+        first_part = A or B
+    elif op1 == 'НЕ':
+        first_part = not A
+    else:
+        raise ValueError("Неверный оператор")
+    if op2 == 'И':
+        result = first_part and C
+    elif op2 == 'ИЛИ':
+        result = first_part or C
+    elif op2 == 'НЕ':
+        result = not first_part
+    else:
+        raise ValueError("Неверный оператор")
+    return result
+A = input("Введите значение A (True/False): ") == 'True'
+B = input("Введите значение B (True/False): ") == 'True'
+C = input("Введите значение C (True/False): ") == 'True'
+op1 = input("Введите первый логический оператор (И, ИЛИ, НЕ): ")
+op2 = input("Введите второй логический оператор (И, ИЛИ, НЕ): ")
+result = evaluate_expression(A, B, C, op1, op2)
+print(f"Результат выражения: {result}")
